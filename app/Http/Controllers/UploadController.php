@@ -25,6 +25,6 @@ class UploadController extends Controller
 
         // todo: if success, create another vc with nexus api
 
-        return redirect()->back()->with(['message' => 'success!']);
+        return redirect()->back();
     }
 }
