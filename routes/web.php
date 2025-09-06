@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return redirect(route('upload'));
+    return redirect(route('upload.create'));
 })->name('home');
 
-Route::get('/upload', UploadController::class)->name('upload');
+Route::resource('/upload', UploadController::class)->only(['create', 'store']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
