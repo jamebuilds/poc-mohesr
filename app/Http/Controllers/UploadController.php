@@ -8,11 +8,12 @@ use Inertia\Response;
 
 class UploadController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request): Response
     {
+        // todo: verify the json file uploaded with nexus api
+
+        // todo: if success, create another vc with nexus api
+
         return Inertia::render('upload', []);
     }
 }
