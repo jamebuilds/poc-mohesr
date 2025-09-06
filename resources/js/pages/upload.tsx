@@ -11,8 +11,8 @@ import { Form, Head } from '@inertiajs/react';
 export default function Upload() {
     return (
         <>
-            <Head title="Upload Credentials" />
-                
+            <Head title="Upload Credential" />
+
             <div className="p-10">
                 <Heading title="POC - MOHESR" />
                 <Form className="space-y-4" action={store()} resetOnSuccess>
