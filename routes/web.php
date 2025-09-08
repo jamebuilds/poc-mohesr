@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiUploadController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\VerifyController;
 use Illuminate\Support\Facades\Route;
@@ -10,8 +11,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('/upload', UploadController::class)->only(['create', 'store']);
-
 Route::resource('/verify', VerifyController::class)->only(['create']);
+
+Route::post('api/upload', [ApiUploadController::class, 'store']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
