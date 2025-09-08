@@ -37,6 +37,7 @@ return [
 
     'nexus' => [
         'token' => env('NEXUS_API_TOKEN'),
+        'verifier_token' => env('NEXUS_VERIFIER_TOKEN'),
     ]
 
 ];

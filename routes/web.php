@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\VerifyController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -9,6 +10,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::resource('/upload', UploadController::class)->only(['create', 'store']);
+
+Route::resource('/verify', VerifyController::class)->only(['create']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
