@@ -15,7 +15,7 @@ export default function Upload() {
 
             <div className="p-10">
                 <Heading title="POC - MOHESR" />
-                <Form className="space-y-4" action={store()} resetOnSuccess>
+                <Form className="space-y-4" action={store()} resetOnSuccess disableWhileProcessing>
                     {({ processing, recentlySuccessful, errors }) => (
                         <>
                             <Transition
@@ -26,7 +26,7 @@ export default function Upload() {
                                 leaveTo="opacity-0"
                             >
                                 <Alert className="border-green-200 bg-green-50 text-green-800">
-                                    <AlertDescription>Upload successful!</AlertDescription>
+                                    <AlertDescription>Upload successful! An email will be sent to the recipient shortly in 10 mins</AlertDescription>
                                 </Alert>
                             </Transition>
 

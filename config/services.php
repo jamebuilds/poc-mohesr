@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'nexus' => [
+        'token' => env('NEXUS_API_TOKEN'),
+    ]
+
 ];
