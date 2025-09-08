@@ -36,6 +36,8 @@ return [
     ],
 
     'nexus' => [
+        'workflow_endpoint' => env('NEXUS_WORKFLOW_ENDPOINT'),
+        'verify_endpoint' => env('NEXUS_VERIFY_ENDPOINT'),
         'token' => env('NEXUS_API_TOKEN'),
         'verifier_token' => env('NEXUS_VERIFIER_TOKEN'),
     ]

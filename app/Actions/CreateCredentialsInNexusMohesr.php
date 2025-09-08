@@ -31,7 +31,7 @@ class CreateCredentialsInNexusMohesr
             ];
 
             $response = Http::withToken(config('services.nexus.token'))
-                ->post('https://nexus.uat.accredify.io/api/workflows/9fd3a69a-34ae-46da-a3eb-d1774d776aba/runs', $payload)
+                ->post(config('services.nexus.workflow_endpoint'), $payload)
                 ->json();
 
 //        dd($response);

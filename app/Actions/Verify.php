@@ -12,7 +12,7 @@ class Verify
             // call verify endpoint to check
             $response = Http::attach('file', $content, 'file.json')
                 ->withToken(config('services.nexus.token'))
-                ->post('https://nexus.uat.accredify.io/verification/v1/verify')
+                ->post(config('services.nexus.verify_endpoint'))
                 ->json();
 
 //        dd($response);
