@@ -114,7 +114,7 @@ class UploadController extends Controller
             if ($response['not_tampered'] === true
                 && $response['valid_issuer'] === true
                 && $response['recognized_institute'] === true
-                && $response['not_revoked'] === true
+//                && $response['not_revoked'] === false
             ) {
                 return true;
             }
