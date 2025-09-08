@@ -23,7 +23,7 @@ class ApiUploadController extends Controller
             ]);
         }
 
-        $content = $request->file('credential')->get();
+        $content = $request->file('file')->get();
 
         if (!app(Verify::class)($content)) {
             return response()->json([
